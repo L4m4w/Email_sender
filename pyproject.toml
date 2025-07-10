@@ -1,0 +1,16 @@
+[project]
+name = "email-sender"
+version = "0.1.0"
+description = "Project to test load on email connection"
+authors = [
+    {name = "Evgeny Larkin",email = "evgeny.larkin@atom.team"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
