@@ -11,13 +11,13 @@ load_dotenv()
 def main():
     generator = EmailGenerator()
 
-    emails = generator.generate_email(count=1000)
+    emails = generator.generate_email(count=1)
 
     smtp_config = {
-        'server': os.getenv('SMTP_SERVER', 'smtp.gmail.com'),
-        'port': int(os.getenv('SMTP_PORT', 587)),
-        'username': os.getenv('SMTP_USERNAME'),
-        'password': os.getenv('SMTP_PASSWORD')
+        'smtp_server': settings.user_data.server,
+        'smtp_port': settings.user_data.port,
+        'username': settings.user_data.username,
+        'password': settings.user_data.password
     }
 
     sender = EmailSender(**smtp_config)
